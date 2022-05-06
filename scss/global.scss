@@ -1,0 +1,18 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  @include body-font;
+  background: var(--background);
+  color: var(--text-pri);
+ }
+
+img {
+  width: 100%;
+  filter: var(--img-brightness);
+}
+
+::selection {background: var(--text-hl);}
+::-moz-selection {background: var(--text-hl);}

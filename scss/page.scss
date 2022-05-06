@@ -1,0 +1,136 @@
+section {
+  width: 100%;
+  padding: 4rem 0;
+  &:nth-of-type(even) {background-color: var(--background-alt);}
+}
+
+h1, h2, h3 {
+  margin: 3em 0 0 0;
+  &:first-of-type {margin: 0;}
+}
+
+.accent {color: var(--text-theme);}
+
+figure, .margin-auto {margin: auto;}
+
+figcaption {
+  text-align: center;
+  margin: .5em 24px 0 24px;
+  color: var(--text-sec);}
+
+#title {
+  background-color: transparent;
+  h1 {
+    color: var(--text-theme);
+    animation: 2s ease-out 0s 1 slideInFromBottom;
+  }
+  h3 {
+    margin-top: .5em;
+    line-height: 1.5;
+    animation: 2s ease-out 0s 1 slideInFromBottom;
+  }
+}
+
+#overview {
+  background-color: transparent;
+  h3 {
+    color: var(--text-sec);
+    margin-bottom: .5em;
+    &:nth-of-type(2) {margin-top:2em;}
+  }
+  p {margin-top: 0;}
+}
+
+ul, ol {
+  margin: 1.5em 0;
+  li {
+    margin-bottom: 1em;
+    &::marker {
+      font-weight: bold;
+      color: var(--text-sec);
+    }
+  }
+}
+
+#next {
+  background-color: transparent;
+  padding-bottom: 32px;
+}
+
+.next-link {
+  text-decoration: none;
+  animation: next-out 1s ease-out forwards;
+  &:hover {
+    animation: next-in 1s ease-in forwards;
+  }
+}
+
+.next-story {
+  border-radius: 10px;
+  box-shadow: 1px 1px 4px rgba(0,0,0,.2);
+  padding: 1.5em;
+  background-color: var(--background-alt);
+  h2 {
+    color: var(--text-theme);
+    margin-top: 0;
+    width: 75%;
+    position: relative;
+    z-index: 1;
+    &:after{
+      content:"\A";
+      display:inline-block;
+      position: relative;
+      left: .5em;
+      width: .9em;
+      height: .9em;
+      mask: url("/img/arrow.svg") 0 0/.9em .9em;
+      background-color: var(--text-theme);
+    }
+  }
+  
+  p {
+    margin: 0 0 .5rem 0;
+    color: var(--text-sec);
+  }
+}
+
+.persona {
+  width: 60%;
+  position: relative;
+  left: 30%;
+}
+
+.pain {
+  margin: auto;
+}
+
+.strike {
+  text-decoration: line-through;
+  color: var(--text-dis);
+  font-style: italic;
+}
+
+.quote {
+  @include body-font;
+  font-style: italic;
+  padding: 2rem 1rem;
+  font-weight: 400;
+  color: var(--text-sec);
+}
+
+.next-img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+
+footer {
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 640px) {
+  .persona {display:none;}
+  .pain {width: 47%;}
+}

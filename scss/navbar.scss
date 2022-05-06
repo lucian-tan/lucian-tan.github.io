@@ -1,0 +1,121 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1280px;
+  margin: 24px auto 0 auto;
+  padding: 0 24px;
+
+  ul {
+    list-style-type: none;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    li {
+      margin: 0;
+      padding: 0 0 0 2em;
+      line-height: 27px;
+      @include display-font;
+    }
+    a {
+      text-decoration: none;
+      color: var(--nav-blank);
+      &:hover {
+        color: var(--nav-hover);
+      }
+    }
+  }
+
+  #nav-work, #nav-about {animation: 1.5s ease-out 0s 1 slideInFromBottom;}
+
+// Switch
+
+  button {
+    color: var(--font-color);
+    background: var(--color-primary);
+    padding: .5em 1em;
+    border: 0;
+    border-radius: 5px;
+  }
+
+  /* The switch - the box around the slider */
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 27px;
+  }
+
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 2px;
+    border: 2px solid var(--text-dis);
+    transition: 0.4s;
+    &:before{
+      position: absolute;
+      content: "";
+      height: 19px;
+      width: 19px;
+      left: 2px;
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+      transition: 0.4s;
+      background: var(--text-sec) url('/img/moon.png');
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  input:checked + .slider {
+    background-color: var(--color-logo);
+    border: 2px solid var(--color-logo);
+  }
+
+  // input:focus + .slider {}
+  input:checked + .slider:before {
+    transform: translateX(24px);
+    background: var(--background) url('/img/moon.png');
+  }
+
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 1em;
+    &::before {
+      border-radius: 50%;
+    }
+  }
+}
+
+#logo {
+  width: 48px; 
+  fill: var(--color-logo);
+  animation: 1.5s ease-out 0s 1 slideInFromBottom;
+}
+
+@media (min-width: 480px) { 
+  nav {
+    padding: 0 32px;
+    margin: 32px auto 0 auto;
+  }
+  #logo {width: calc(2.40964vw + 39.3253px);}
+}
+
+@media (min-width: 1024px) {
+  #logo{width: 64px;}
+}

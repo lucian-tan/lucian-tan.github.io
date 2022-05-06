@@ -1,0 +1,37 @@
+p {
+  font-size: 16px;
+}
+
+@media (min-width: 360px) {
+  p {
+    font-size: calc(0.4902vw + 14.23529px);
+  }
+}
+
+@media (min-width: 768px) {
+  p {
+    font-size: calc(1.04167vw + 10px);
+  }
+}
+
+@media (min-width: 960px) {
+  p {
+    font-size: 20px;
+  }
+}
+
+#logo {
+  font-size: 48px;
+}
+
+@media (min-width: 360px) {
+  #logo {
+    font-size: calc(2.40964vw + 39.3253px);
+  }
+}
+
+@media (min-width: 1024px) {
+  #logo {
+    font-size: 64px;
+  }
+}
