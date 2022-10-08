@@ -37,6 +37,8 @@ h1 {font-size: 2.281rem;}
 p, li, .caption {line-height: 1.8;}
 h3, h2, h1 {line-height: 1.5; @include display-font; color: var(--text-pri)}
 
+.accent {color: var(--text-theme);}
+
 a {
   color: var(--text-theme);
   &:hover {color: var(--text-sec);}

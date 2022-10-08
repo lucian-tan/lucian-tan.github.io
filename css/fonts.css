@@ -49,6 +49,10 @@ h3, h2, h1 {
   color: var(--text-pri);
 }
 
+.accent {
+  color: var(--text-theme);
+}
+
 a {
   color: var(--text-theme);
 }

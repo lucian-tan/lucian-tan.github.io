@@ -1,6 +1,7 @@
-.theme-light, :root {
+.theme-light {
   --background: #FAFAFA;
   --background-alt: #F2F2F2;
+  --background-trans: rgba(250,250,250,0);
   --color-logo: #CA3D3D;
   --text-theme: #CA1E1E;
   --text-pri: #2E2525;
@@ -9,6 +10,7 @@
   --text-hl: #FFD8D8;
   --nav-blank: rgba(0,0,0,.54);
   --nav-hover: #CA1E1E;
+  --button-hover: #FF8383;
   --img-brightness: none;
   --drop-shadow: rgba(0,0,0,.2);
 }
@@ -16,6 +18,7 @@
 .theme-dark {
   --background: #0F111E;
   --background-alt: #181B30;
+  --background-trans: rgba(15,17,30,0);
   --color-logo: #FF8383;
   --text-theme: #FF8383;
   --text-pri: #FAFAFA;
@@ -24,6 +27,7 @@
   --text-hl: #A12626;
   --nav-blank: #FAFAFA;
   --nav-hover: #FF8383;
+  --button-hover: #CA1E1E;
   --img-brightness: brightness(.9);
   --drop-shadow: none;
 }

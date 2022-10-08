@@ -6,7 +6,7 @@ section {
 
 h1, h2, h3 {
   margin: 3em 0 0 0;
-  &:first-of-type {margin: 0;}
+  &:first-child {margin: 0;}
 }
 
 .accent {color: var(--text-theme);}
@@ -16,7 +16,8 @@ figure, .margin-auto {margin: auto;}
 figcaption {
   text-align: center;
   margin: .5em 24px 0 24px;
-  color: var(--text-sec);}
+  color: var(--text-sec);
+}
 
 #title {
   background-color: transparent;
@@ -52,85 +53,74 @@ ul, ol {
   }
 }
 
-#next {
-  background-color: transparent;
-  padding-bottom: 32px;
-}
-
-.next-link {
-  text-decoration: none;
-  animation: next-out 1s ease-out forwards;
-  &:hover {
-    animation: next-in 1s ease-in forwards;
-  }
-}
+.next-link {text-decoration: none;}
 
 .next-story {
-  border-radius: 10px;
-  box-shadow: 1px 1px 4px rgba(0,0,0,.2);
-  padding: 1.5em;
-  background-color: var(--background-alt);
+  padding-top:0;
+  justify-content: center;
   h2 {
     color: var(--text-theme);
     margin-top: 0;
-    width: 75%;
-    position: relative;
-    z-index: 1;
-    &:after{
-      content:"\A";
-      display:inline-block;
-      position: relative;
-      left: .5em;
-      width: .9em;
-      height: .9em;
-      mask: url("/img/arrow.svg") 0 0/.9em .9em;
-      background-color: var(--text-theme);
     }
-  }
   
   p {
     margin: 0 0 .5rem 0;
     color: var(--text-sec);
+    &:after{
+      content:"\A";
+      display:inline-block;
+      position: relative;
+      left: .3em;
+      width: .9em;
+      height: .9em;
+      mask: url("/img/arrow.svg") 0 0/.9em .9em;
+      background-color: var(--text-sec);
+    }
   }
 }
 
-.persona {
-  width: 60%;
-  position: relative;
-  left: 30%;
-}
-
-.pain {
-  margin: auto;
-}
-
-.strike {
-  text-decoration: line-through;
-  color: var(--text-dis);
-  font-style: italic;
-}
-
-.quote {
-  @include body-font;
-  font-style: italic;
-  padding: 2rem 1rem;
-  font-weight: 400;
-  color: var(--text-sec);
-}
-
-.next-img {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-}
-
-
-footer {
-  flex-direction: column;
-  align-items: center;
+.next-image {
+  padding: 0;
+  vertical-align: middle;
 }
 
 @media (max-width: 640px) {
-  .persona {display:none;}
-  .pain {width: 47%;}
+  .next-image {display:none;}
+}
+
+.vert-mid {
+  justify-content: center;
+}
+
+
+
+.lastsect {
+		padding-bottom: 0 !important;
+		margin-bottom: 0 !important;
+    position: relative;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 12em;
+  background: linear-gradient(0deg, var(--background) 0%, var(--background) 15%, var(--background-trans) 100%);
+}
+
+.giffig {
+  position: relative;
+}
+
+.gif-ne {
+  position: absolute;
+  width: 76.2%;
+  left: 11.9%;
+  top: 15.9%;
+}
+
+@media (min-width: 972px) {
+  .gif-ne {
+    top: 14.9%;
+  }
 }

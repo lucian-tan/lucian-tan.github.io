@@ -22,8 +22,8 @@
 		animation: 2s ease-out 0s 1 slideInFromBottom;
 	}
 
-	.txt-rotate {
-		color: var(--text-pri);
+	.other-title, .txt-rotate {
+		color: var(--text-pri) !important;
 	}
 	
 	h3 {
@@ -37,16 +37,18 @@
 		color: var(--text-pri);
 		text-decoration: none;
 		&:hover {
-			color: var(--nav-hover);
+			color: var(--text-theme);
 		}
 	}
 }
 
 #memoji {
-	max-width: 200px;
 	margin: auto;
-	animation: 2s ease-out 0s 1 slideInFromBottom;
-	display: none;
+	max-width: 200px;
+}
+
+@media (max-width: 640px){
+	#memoji {display: none;}
 }
 
 #work {
@@ -64,6 +66,7 @@
 		h2 {margin: 0;}
 
 		p {
+			color: var(--text-pri);
 			line-height: 1.4;
 			margin: .5em 0;
 		}
@@ -75,12 +78,14 @@
 		
 		a {
 			cursor: pointer;
+			text-decoration: none;
+		}
+		
+		.link {
+			margin: 2em 0 0 0;
 			@include display-font;
 			text-transform: uppercase;
-			text-decoration: none;
-			&:hover {
-				color: var(--nav-hover);
-			}
+			color: var(--text-theme);
 			&:after{
 				content:"\A";
 				display:inline-block;
@@ -92,14 +97,10 @@
 				background-color: var(--text-theme);
 			}
 		}
-		
-		.link {
-			margin: 2em 0 0 0;
-			transition: all .5s ease-in-out;
-			transform-origin: left;
-			&:hover {
-				transform: scale(1.1,1.1)
-			}
+
+		.coming {
+			text-transform: uppercase;
+			color: var(--text-sec);
 		}
 	}
 }
@@ -110,8 +111,4 @@ footer {
 	justify-content: space-between;
 	align-items: center;
 	margin-top: 10vh;
-}
-
-@media (min-width: 640px) {
-	#memoji {display: block;}
 }

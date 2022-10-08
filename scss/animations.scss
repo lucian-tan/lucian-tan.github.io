@@ -11,13 +11,3 @@
     opacity: 1;
   }
 }
-
-@keyframes next-in {
-  from {transform: translate(0,0);}
-  to {transform: translate(0,-5%);}
-}
-
-@keyframes next-out {
-  from {transform: translate(0,-5%);}
-  to {transform: translate(0,0);}
-}
