@@ -90,7 +90,7 @@ nav {
 
   // input:focus + .slider {}
   input:checked + .slider:before {
-    transform: translateX(24px);
+    transform: translateX(23px);
     background: var(--background) url('/img/moon.png');
   }
 

@@ -1,4 +1,4 @@
-.theme-light {
+:root, .theme-light {
   --background: #FAFAFA;
   --background-alt: #F2F2F2;
   --background-trans: rgba(250,250,250,0);
@@ -438,8 +438,8 @@ nav input:checked + .slider {
 }
 
 nav input:checked + .slider:before {
-  -webkit-transform: translateX(24px);
-          transform: translateX(24px);
+  -webkit-transform: translateX(23px);
+          transform: translateX(23px);
   background: var(--background) url("/img/moon.png");
 }
 
@@ -523,6 +523,7 @@ textarea {
   background-color: var(--text-theme);
   border: 0;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .formbtn:hover {

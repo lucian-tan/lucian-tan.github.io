@@ -440,8 +440,8 @@ nav input:checked + .slider {
 }
 
 nav input:checked + .slider:before {
-  -webkit-transform: translateX(24px);
-          transform: translateX(24px);
+  -webkit-transform: translateX(23px);
+          transform: translateX(23px);
   background: var(--background) url("/img/moon.png");
 }
 
