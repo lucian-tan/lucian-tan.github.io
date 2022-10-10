@@ -604,6 +604,10 @@ h1:first-child, h2:first-child, h3:first-child {
   color: var(--text-theme);
 }
 
+.text-mid {
+  text-align: center;
+}
+
 figure, .margin-auto {
   margin: auto;
 }

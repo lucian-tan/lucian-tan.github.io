@@ -689,7 +689,7 @@ footer #copyright {
   background-color: var(--text-theme);
 }
 
-#work .text-box .coming {
+.coming {
   text-transform: uppercase;
   color: var(--text-sec);
 }

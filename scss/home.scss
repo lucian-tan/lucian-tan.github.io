@@ -98,11 +98,12 @@
 			}
 		}
 
-		.coming {
-			text-transform: uppercase;
-			color: var(--text-sec);
-		}
 	}
+}
+
+.coming {
+	text-transform: uppercase;
+	color: var(--text-sec);
 }
 
 .img-box {margin: auto;}
