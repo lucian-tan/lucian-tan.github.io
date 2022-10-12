@@ -156,6 +156,14 @@ ul li::marker, ol li::marker {
   top: 15.9%;
 }
 
+.gif-aq {
+  position: absolute;
+  width: 89.1%;
+  left: 5.9%;
+  top: 2.2%;
+  border-radius: 36px;
+}
+
 @media (min-width: 972px) {
   .gif-ne {
     top: 14.9%;

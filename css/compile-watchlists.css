@@ -739,6 +739,11 @@ ul li::marker, ol li::marker {
   top: 15.9%;
 }
 
+.phone-aq {
+  width: 423px;
+  text-align: center;
+}
+
 @media (min-width: 972px) {
   .gif-ne {
     top: 14.9%;

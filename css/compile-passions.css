@@ -602,6 +602,10 @@ h1:first-child, h2:first-child, h3:first-child {
   color: var(--text-theme);
 }
 
+.text-mid {
+  text-align: center;
+}
+
 figure, .margin-auto {
   margin: auto;
 }
@@ -733,6 +737,14 @@ ul li::marker, ol li::marker {
   width: 76.2%;
   left: 11.9%;
   top: 15.9%;
+}
+
+.gif-aq {
+  position: absolute;
+  width: 89.1%;
+  left: 5.9%;
+  top: 2.2%;
+  border-radius: 36px;
 }
 
 @media (min-width: 972px) {

@@ -12,13 +12,20 @@
     <meta property="og:site_name" content="Lucian Tan - Product Designer">
     <meta property="og:title" content="Initiating a passion-driven social network experience - Lucian Tan">
     <meta property="og:type" content="website">
-
     <title>Initiating a passion-driven social network experience - Lucian Tan</title>
     <link rel="stylesheet" href="dist/css/normalize.css" >
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;700&display=swap"> 
     <link rel="stylesheet" href="dist/css/compile-passions.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VD6Z9F4PBY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-VD6Z9F4PBY');
+    </script>
   </head>
 
   <body>
@@ -51,12 +58,12 @@
     <section id="title" class="row-md">
       <div class="col">
         <h1>Initiating a passion-driven social network experience</h1>
-        <h3>xxx</h3>
+        <h3>Recommending content and connecting people through their hobbies, interests, and passions</h3>
       </div>
     </section>
     <div class="row-lg">
       <div class="col-img">
-        <img src="img/SM/cover-sm.png">
+        <img src="img/aq/cover-aq.png">
       </div>
     </div>
     <section id="overview">
@@ -116,48 +123,41 @@
       <h3 class="section-title">Background</h3>
       <div class="row-sm">
         <div class="col">
-          <h2>A new social network to engage in interests</h2>
+          <h2>A new social network to share personal interests with people</h2>
           <p>
             The social network, only available as a mobile app, is centred on creating communities for people to share and discuss about topics they are passionate about. Users can share stories in various media formats or simply text, discuss via comments, and connect with other users directly. The social network also promised that they will eschew showing advertisements and create an economy based on collaborations and sponsorship.
           </p>
         </div>
-      </div>
-      <div class="row-md">
-        <div class="col">
-          <figure>
-            <img class="shadow" src="/img/SM/trends.png">
-            <figcaption class="caption">xx</figcaption>
-          </figure>
-        </div>
-      </div>
-      <div class="row-sm">
         <div class="col">
           <h2>Target users</h2>
           <p>
-            While the target user demographics are set as 'Gen Z' users (born in the late 1990s and later), any smartphone user seeking information, entertainment or connection with other people regarding a subject area can be a user of this product.
+            While the target user was set as 'Gen Z' users (born in the late 1990s and later), any smartphone user seeking information, entertainment or connection with other people regarding a subject area can be a user of this product.
           </p>
         </div>
       </div>
     </section>
 
     <section>
-      <h3 id="problem" class="section-title">Problem</h3>
-      <div class="row-sm">
-        <div class="col">
-          <h2>App experience fell short of promised expectations</h2>
+      <h3 id="problem" class="section-title">Problems</h3>
+      <div class="row-md">
+        <div class="col-1-2">
+          <h2>Generic, lacklustre user experience</h2>
           <p>
-            xx
+            Testers of the app frequently received content unrelated to their interests, which left a poor impression of the app experience.
           </p>
-          <figure style="text-align: center;" >
-            <img src="img/SM/filterframe.png" style="max-width: 320px;">
-            <figcaption class="caption">Example of the selection that a subscriber might have needed to make.</figcaption>
-          </figure>
         </div>
+        <div class="col-1-2">
+          <h2>Limited data to power personalisation</h2>
+          <p>
+            Internal teams had limited data of user intentions on the app (during the beta phase) to make decisions.
+          </p>
+        </div>
+          
       </div>
     </section>
 
     <section>
-      <h3 id="objective" class="section-title">Design process</h3>
+      <h3 id="process" class="section-title">Design process</h3>
       <div class="row-md">
         <div class="col-1-3">
           <h3>Understand + <br>Define</h3>
@@ -180,14 +180,70 @@
       </div>
     </section>
 
+    <section id="scoping">
+      <h3 class="section-title">Project scoping</h3>
+      <div class="row-sm">
+        <div class="col">
+          <h2>Collaborating with other stakeholders</h2>
+          <p>
+            We also learned about the state of affairs and and discussed future plans with other stakeholders, namely the product and engineering teams, the machine learning team, and content teams. This enables us to determine the priority and required delivery dates of specific experiences in order to deliver the intended impacts.
+          </p>
+        </div>
+        <div class="col">
+          <h2>Defining scope</h2>
+          <p>
+            Through those discussions, we identified 3 domains the team needs to work on to deliver a complete experience. In this story, the process will be covering our steps taken for the 'personalisation' domain. 
+          </p>
+        </div>
+      </div>
+      <div class="row-md">
+        <div class="col-1-3">
+          <h3 class="accent">Personalisation</h3>
+          <p class="accent">How users can express their passions and shape their online presence in the social network</p>
+        </div>
+        <div class="col-1-3">
+          <h3>Recommendation</h3>
+          <p>How users can control the recommendations provided by the social network to match their preferences</p>
+        </div>
+        <div class="col-1-3">
+          <h3>Matching</h3>
+          <p>How creators/users can increase the odds of getting their content/profiles shown to the right audience</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3 class="section-title">Project phases</h3>
+      <div class="row-sm">
+        <div class="col">
+          <h2>Transitioning from non-users to users</h2>
+          <p>
+            We started the project before early users were invited to test the application. I planned the tasks so that the lack of real users did not block the progress of the project.
+          </p>
+        </div>
+      </div>
+      <div class="row-md">
+        <div class="col">
+          <figure>
+            <img class="shadow" src="/img/aq/projphase.png">
+            <figcaption class="caption">Phases and executed tasks of the project</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
     <section id="insights">
       <h3 class="section-title">Research</h3>
       <div class="row-sm">
         <div class="col">
           <h2>Understanding new user expectations</h2>
           <p>
-            When access to the app was restricted to employees and a few individuals, we conducted research with UserTesting to gain insights from our target users. Some of the findings include:
-          </p>
+            During the 'internal access' phase when real users were absent, we used <a href="https://www.usertesting.com/" target="_blank">UserTesting</a> to source testers that match our target user and gain insights from them.</p>
+        </div>
+        <div class="col">
+          <h2>Understanding new user expectations</h2>
+          <p>
+            During the 'internal access' phase when real users were absent, we used <a href="https://www.usertesting.com/" target="_blank">UserTesting</a> to source testers that match our target user and gain insights from them.</p>
         </div>
       </div>
       <div class="row-md">
@@ -222,9 +278,9 @@
       <h3 id="objective" class="section-title">Objective</h3>
       <div class="row-sm">
         <div class="col">
-          <h2>Enable subscribers to save and quickly access the customised analyses they are following</h2>
+          <h2>Create a social network experience that connects people through passions</h2>
           <p>
-            With the intended approaches in mind, the goal is to provide a way for subscribers to take 'snapshots' of the analyses they have customised, and provide an avenue to access these 'snapshots' that will always be up-to-date. 
+            To fulfil the promise of a an avenue to access these 'snapshots' that will always be up-to-date. 
           </p>
         </div>
       </div>
@@ -252,59 +308,63 @@
 
     <section id="outcomes" class="lastsect">
       <h3 class="section-title">Design outcomes</h3>
-      <div class="row-sm">
-        <div class="col">
-          <h2>Save and name what you see </h2>
-          <p>
-            Once subscribers load the charts they want to track, they can save and name it in matter of seconds.
-          </p>
-        </div>
-      </div>
-      <div class="row-lg">
-        <figure>
-          <img class="shadow" src="img/SM/save.gif">
-          <figcaption class="caption">Animation (~30s) depicting the steps of saving an analysis to a watchlist.</figcaption>
-        </figure>
-      </div>
-      <div class="row-sm">
-        <div class="col">
-          <h2>New homepage feature</h2>
-          <p>
-            Replacing a previous 'design' that was mostly irrelevant, introducing the watchlist feature on the homepage provides greater visibility and encourages user adoption. Due to technological constraints, the best solution was to enable subscribers to open all their saved analyses in a group at once as new tabs with a click of a button.
-          </p>
-        </div>
-      </div>
-      <div class="row-lg">
-        <figure>
-          <img class="shadow" src="/img/SM/homepage.png">
-          <figcaption class="caption">New homepage design.</figcaption>
-        </figure>
-      </div>
-      <div class="row-sm">
-        <div class="col">
-          <h2>Manage and edit watchlists</h2>
-          <p>
-            A new page for subscribers to modify their watchlists. Subscribers can re-arrange, rename, and delete their watchlists and items here.
-          </p>
-        </div>
-      </div>
       <div class="row-md">
-        <figure>
-          <img class="shadow" src="/img/SM/watchlistpage.png">
-          <figcaption class="caption">New watchlist page with its management features.</figcaption>
-        </figure>
+        <div class="col-1-2 vert-mid">
+          <h2>Obtain prices with less effort</h2>
+          <p>
+            With fewer steps and inputs required, minutes are shaved off the time taken to receive prices. Customers may input full parcel details if they wish to.
+          </p>
+        </div>
+        <div class="col-1-2">
+          <figure class="giffig">
+            <img src="/img/aq/iphone13.png" class="shadow">
+            <img src="/img/aq/reengage.gif" class="gif-aq">
+            <figcaption class="caption">Animation (24s) of obtaining parcel price and details.</figcaption>
+          </figure>
+        </div>
       </div>
+
+      <div class="row-md reverse">
+        <div class="col-1-2 vert-mid">
+          <h2>Highlighting passions on profiles</h2>
+          <p>
+            Highlighting common interests in people to increase the odds of initiating friendships and retention on the app.
+          </p>
+        </div>
+        <div class="col-1-2">
+          <figure>
+            <img src="/img/aq/profiles.png" class="shadow">
+          </figure>
+        </div>
+      </div>
+      
+
+      <div class="row-md">
+        <div class="col-1-2 vert-mid">
+          <h2>Update your passions as you browse</h2>
+          <p>
+            Users are prompted to update their passions based on their past activity so as to keep their presence up-to-date to their preferences.
+          </p>
+        </div>
+        <div class="col-1-2">
+          <figure class="giffig">
+            <img src="/img/aq/iphone13.png" class="shadow">
+            <img src="/img/aq/reengage.gif" class="gif-aq">
+            <figcaption class="caption">Animation (15s) of setting pick up location.</figcaption>
+          </figure>
+        </div>
+      </div>
+   
       <div class="row-sm">
         <div class="col">
-          <h2>Improved dynamic filter settings </h2>
+          <h2>Requesting a pick up</h2>
           <p>
-            Time-sensitive filters now come with the option of rolling periods, providing accurate data without the hassle of frequent edits.
+            Pickup location setting becomes more relevant to the moment: Customers only enter their address information when they are ready
           </p>
         </div>
       </div>
       <div class="overlay"> </div>
     </section>
-
 
     <section id="contact">
       <div class="row-form">
