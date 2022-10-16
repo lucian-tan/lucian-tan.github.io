@@ -139,20 +139,14 @@
 
     <section>
       <h3 id="problem" class="section-title">Problems</h3>
-      <div class="row-md">
-        <div class="col-1-2">
-          <h2>Generic, lacklustre user experience</h2>
-          <p>
-            Testers of the app frequently received content unrelated to their interests, which left a poor impression of the app experience.
-          </p>
-        </div>
-        <div class="col-1-2">
-          <h2>Limited data to power personalisation</h2>
-          <p>
-            Internal teams had limited data of user intentions on the app (during the beta phase) to make decisions.
-          </p>
-        </div>
-          
+      <div class="row-sm">
+        <h2>Generic, lacklustre user experience</h2>
+        <p>
+          Testers of the app mentioned that while they did not face usability issues, the app experience was subpar. The main problem was <b>constantly receiving content unrelated to their interests as recommendations</b> to them.
+        </p>
+        <p>
+          Testers noted that this meant that <b>the current experience did not match the company's proposition</b> of an engaging space to discover or deep-dive into specific passions, which is a big concern.
+        </p>
       </div>
     </section>
 
@@ -184,15 +178,12 @@
       <h3 class="section-title">Project scoping</h3>
       <div class="row-sm">
         <div class="col">
-          <h2>Collaborating with other stakeholders</h2>
+          <h2>Collaboration to define scope</h2>
           <p>
-            We also learned about the state of affairs and and discussed future plans with other stakeholders, namely the product and engineering teams, the machine learning team, and content teams. This enables us to determine the priority and required delivery dates of specific experiences in order to deliver the intended impacts.
+            From the product and engineering teams, the machine learning team, and content teams, we learned about the state of affairs and discussed future plans.
           </p>
-        </div>
-        <div class="col">
-          <h2>Defining scope</h2>
           <p>
-            Through those discussions, we identified 3 domains the team needs to work on to deliver a complete experience. In this story, most of the work done occurs under the 'personalisation' domain. 
+            Through these discussions, we identified 3 domains the team needs to work on to deliver a complete experience. In this story, most of the work done occurs under the 'personalisation' domain. 
           </p>
         </div>
       </div>
@@ -210,15 +201,23 @@
           <p>How creators/users can increase the odds of getting their content/profiles shown to the right audience</p>
         </div>
       </div>
+      <div class="row-sm">
+        <div class="col">
+          <h2>Prioritising tasks</h2>
+          <p>Through discussions on technical details, we concluded that we currently lack data on user preferences to power recommendation capabilities. My task was to work on <b>creating avenues to gather information on the passions the user is interested in</b>, while other teams work on feasibility to build the required assets.
+            
+          </p>
+        </div>
+      </div>
     </section>
 
     <section id="objective">
       <h3 class="section-title">Objective</h3>
       <div class="row-sm">
         <div class="col">
-          <h2>Create a social network experience that connects people through passions</h2>
+          <h2>Setting up a system that entertains and connects people through passions</h2>
           <p>
-            In line with other ambitious ongoing projects within the company, the goal of this project is to product a social network experience centred on areas of interest and passions. Key interactions we strive to foster are to <b class="accent">connect people</b> through these passions, and <b class="accent">introduce new passions</b> for people to learn about and possibly fall in love with.  
+            As a part of many other ambitious ongoing projects within the company, this project aims to reinforce the company proposition of providing rich experiences centred on passions. Key interactions to achieve include <b class="accent">connecting people to the right communities</b> based on their common passions, <b class="accent">introducing new passions</b> to users, and <b class="accent">fostering friendships</b> on the social network.
           </p>
         </div>
       </div>
@@ -230,7 +229,7 @@
         <div class="col">
           <h2>Transitioning from non-users to users</h2>
           <p>
-            We started the project before early users were invited to test the application. I planned the tasks so that the lack of real users did not block the progress of the project, while ensuring that the quality of the research findings were not compromised.
+            When we started the project, it was shortly before early users were invited to test the application. I planned the tasks so that the lack of real users did not block the progress of the project, while ensuring that the design decisions made (and the quality of the research findings) were not compromised.
           </p>
         </div>
       </div>
@@ -250,7 +249,7 @@
         <div class="col">
           <h2>Understanding new user expectations</h2>
           <p>
-            When real users were unavailable during the 'internal access' phase, we used <a href="https://www.usertesting.com/" target="_blank">UserTesting</a> to source testers that match our target user and gain insights from them. The data from this research phase gave the team insights on what  </p>
+            When real users were unavailable during the 'internal access' phase, we used <a href="https://www.usertesting.com/" target="_blank">UserTesting</a> to source testers that match our target user and gain insights from them. The tests from this phase were designed to provide insights on users that have never been on the app before, and were hence focused on the new user onboarding experience.</p>
         </div>
       </div>
       <div class="row-lg">
@@ -276,40 +275,47 @@
           </figure>
         </div>
       </div>
+      <div class="row-sm">
+        <div class="col">
+          <h2>Compare and contrast</h2>
+          <p>
+            Conducting these two research projects provided us with more information on the different expectations from different groups of users, which in turn assisted us in planning both the user experience of the application and the product roadmap.
+        </div>
+      </div>
     </section>
 
     <section id="insights">
       <h3 class="section-title">Insights and design</h3>
       <div class="row-sm">
         <div class="col">
-          <h2>Key insights across research</h2>
-          <p></p>
+          <h2>Select insights</h2>
+          <p>From the research, we learned and made decisions such as:</p>
         </div>
       </div>
       <div class="row-md">
         <div class="col-1-2">
           <h3>Finding #1</h3>
-          <p>Subscribers can apply <b>many filters</b> for an analysis, which becomes a cumbersome task when repeated.</p>
+          <p>Most testers select more passions if it is from a pre-determined list as opposed to finding each passion they can think of through a search function.  </p>
         </div>
         <div class="col-1-2">
           <h3 class="accent">Approach #1</h3>
-          <p>Set up a convenient method to save and load complex filters settings.</p>
+          <p>Taking existing resources in mind, we decided on an uncategorised, pre-determined list for the first release of the passion selection screen during new user sign-up. </p>
         </div>
         <div class="col-1-2">
           <h3>Finding #2</h3>
-          <p>Subscribers check <b>various</b> analyses (with filters) <b>routinely</b> for a thesis.</p>
+          <p>'Closed beta' users preferred displaying all their passions publicly on their personal profile and believe that it is necessary to foster communication.</p>
         </div>
         <div class="col-1-2">
           <h3 class="accent">Approach #2</h3>
-          <p>Enable subscribers to access all their customised analyses with minimal clicks.</p>
+          <p>We de-prioritised privacy setting controls for display of passions on the user profile so that it will be slated for a later release.</p>
         </div>
-        <div class="col-1-2">
-          <h3>Finding #3 (internal)</h3>
-          <p>Usage analytics showed how subscribers used each analysis, but not how they use multiple analyses.</p>
-        </div>
-        <div class="col-1-2">
-          <h3 class="accent">Approach #3</h3>
-          <p>Set up new analytics source(s) that provide insight into how subscribers use multiple analyses.</p>
+      </div>
+      <div class="row-sm">
+        <div class="col">
+          <h2>The 'big picture' and the details</h2>
+          <p>Reviewing all the existing flows on the mobile app, we pinpointed screens and features that were most appropriate to be updated for this passion project. The flow and user interfaces of these screens are reworked to accommodate features to enable passion selection, modification, and display. 
+          </p>
+          <p>Reviews of the design are done within the design team, and later with stakeholders to finalise the assets before software engineers start building them.</p></p>
         </div>
       </div>
     </section>
@@ -326,8 +332,8 @@
         <div class="col-1-2">
           <figure class="giffig">
             <img src="/img/aq/iphone13.png" class="shadow">
-            <img src="/img/aq/reengage.gif" class="gif-aq">
-            <figcaption class="caption">Animation (24s) of obtaining parcel price and details.</figcaption>
+            <img src="/img/aq/passionselection.gif" class="gif-aq">
+            <figcaption class="caption">Animation (30s) of new user passion selection.</figcaption>
           </figure>
         </div>
       </div>
