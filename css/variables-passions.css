@@ -7,7 +7,7 @@
   --text-pri: #2E2525;
   --text-sec: rgba(0,0,0,.54);
   --text-dis: rgba(0,0,0,.35);
-  --text-hl: #D2FFFF;
+  --text-hl: #fbddfe;
   --nav-blank: rgba(0,0,0,.54);
   --nav-hover: #8706C3;
   --img-brightness: none;
@@ -23,7 +23,7 @@
   --text-pri: #FAFAFA;
   --text-sec: rgba(255,255,255,.6);
   --text-dis: rgba(255,255,255,.4);
-  --text-hl: #8706C3;
+  --text-hl: #4f325c;
   --nav-blank: #FAFAFA;
   --nav-hover: #F4A6FF;
   --img-brightness: brightness(.9);
