@@ -1,4 +1,9 @@
+@use "fonts.scss" as *;
+
+
 #intro {
+
+	padding-bottom: 4em !important;
 
 	.col {
 		padding-top: 0;
@@ -6,7 +11,7 @@
 	}
 
 	#intro-title {
-		min-height: 220px;
+		min-height: 280px;
 		margin-bottom: 1em;
 	}
 
@@ -35,7 +40,7 @@
 
 	a {
 		color: var(--text-pri);
-		text-decoration: none;
+		text-decoration: none !important;
 		&:hover {
 			color: var(--text-theme);
 		}

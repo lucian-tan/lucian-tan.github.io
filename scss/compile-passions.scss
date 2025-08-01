@@ -1,13 +1,13 @@
 // Core variables
-@import "variables-passions.scss";
-@import "fonts.scss";
-@import "animations.scss";
-@import "grid.scss";
+@use "variables-passions.scss" as *;
+@use "fonts.scss" as *;
+@use "animations.scss" as *;
+@use "grid.scss" as *;
 
 // Components
-@import "global.scss";
-@import "navbar.scss";
-@import "form.scss";
-@import "footer.scss";
-@import "page.scss";
+@use "global.scss" as *;
+@use "navbar.scss" as *;
+@use "form.scss" as *;
+@use "footer.scss" as *;
+@use "page.scss" as *;
 

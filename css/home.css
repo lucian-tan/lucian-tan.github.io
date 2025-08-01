@@ -1,105 +1,190 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Ilisarniq";
+  src: url("/fonts/Ilisarniq-Regular.eot");
+  src: url("/fonts/Ilisarniq-Regular.eot?#iefix") format("embedded-opentype"), url("/fonts/Ilisarniq-Regular.woff2") format("woff2"), url("/fonts/Ilisarniq-Regular.woff") format("woff"), url("/fonts/Ilisarniq-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Ilisarniq";
+  src: url("/fonts/Ilisarniq-Bold.eot");
+  src: url("/fonts/Ilisarniq-Bold.eot?#iefix") format("embedded-opentype"), url("/fonts/Ilisarniq-Bold.woff2") format("woff2"), url("/fonts/Ilisarniq-Bold.woff") format("woff"), url("/fonts/Ilisarniq-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+html {
+  font-size: 16px;
+}
+
+p, li {
+  font-size: 1rem;
+}
+
+h3, .tab {
+  font-size: 1.125rem;
+}
+
+h2, .social {
+  font-size: 1.602rem;
+}
+
+h1 {
+  font-size: 2.281rem;
+}
+
+.caption {
+  font-size: 0.9rem;
+}
+
+p, li, .caption {
+  line-height: 1.8;
+}
+
+h3, h2, h1 {
+  line-height: 1.5;
+  font-family: "Spartan", sans-serif;
+  font-weight: 700;
+  color: var(--text-pri);
+}
+
+.accent {
+  color: var(--text-theme);
+}
+
+a {
+  color: var(--text-theme);
+}
+a:hover {
+  color: var(--text-sec);
+}
+
+@media (min-width: 360px) {
+  html {
+    font-size: calc(0.4902vw + 14.23529px);
+  }
+}
+@media (min-width: 768px) {
+  html {
+    font-size: calc(1.04167vw + 10px);
+  }
+}
+@media (min-width: 960px) {
+  html {
+    font-size: 20px;
+  }
+}
+.section-title {
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--text-sec);
+}
+.section-title:before {
+  content: "·";
+  margin-right: 0.2em;
+  font-size: 1.5em;
+}
+.section-title:after {
+  content: "·";
+  margin-left: 0.2em;
+  font-size: 1.5em;
+}
+
+#intro {
+  padding-bottom: 4em !important;
+}
 #intro .col {
   padding-top: 0;
   padding-bottom: 0;
 }
-
 #intro #intro-title {
-  min-height: 220px;
+  min-height: 280px;
   margin-bottom: 1em;
 }
-
 #intro #intro-ql h3 {
   color: var(--text-dis);
 }
-
 #intro h1 {
   margin: 0;
   color: var(--text-theme);
-  -webkit-animation: 2s ease-out 0s 1 slideInFromBottom;
-          animation: 2s ease-out 0s 1 slideInFromBottom;
+  animation: 2s ease-out 0s 1 slideInFromBottom;
 }
-
 #intro .other-title, #intro .txt-rotate {
   color: var(--text-pri) !important;
 }
-
 #intro h3 {
   margin: 0;
   padding: 0;
   line-height: 1.5;
-  -webkit-animation: 2s ease-out 0s 1 slideInFromBottom;
-          animation: 2s ease-out 0s 1 slideInFromBottom;
+  animation: 2s ease-out 0s 1 slideInFromBottom;
 }
-
 #intro a {
   color: var(--text-pri);
-  text-decoration: none;
+  text-decoration: none !important;
 }
-
 #intro a:hover {
-  color: var(--nav-hover);
-}
-
-#intro a:visited {
-  color: var(--text-sec);
+  color: var(--text-theme);
 }
 
 #memoji {
-  max-width: 200px;
   margin: auto;
+  max-width: 200px;
 }
 
+@media (max-width: 640px) {
+  #memoji {
+    display: none;
+  }
+}
 #work #dis {
   color: var(--text-dis);
 }
-
 #work .row-lg {
   padding-bottom: 6em;
 }
-
 #work .text-box {
   max-width: 500px;
   margin: auto;
 }
-
 #work .text-box h2 {
   margin: 0;
 }
-
 #work .text-box p {
+  color: var(--text-pri);
   line-height: 1.4;
-  margin: .5em 0;
+  margin: 0.5em 0;
 }
-
 #work .text-box .tags {
   text-transform: uppercase;
   color: var(--text-dis);
 }
-
 #work .text-box a {
   cursor: pointer;
   text-decoration: none;
 }
-
 #work .text-box .link {
   margin: 2em 0 0 0;
+  font-family: "Spartan", sans-serif;
+  font-weight: 700;
   text-transform: uppercase;
+  color: var(--text-theme);
 }
-
-#work .text-box .link:hover {
-  color: var(--nav-hover);
-}
-
 #work .text-box .link:after {
-  content: "\A";
+  content: "\a";
   display: inline-block;
   position: relative;
-  left: .5em;
-  width: .9em;
-  height: .9em;
+  left: 0.5em;
+  width: 0.9em;
+  height: 0.9em;
   -webkit-mask: url("/img/arrow.svg") 0 0/0.9em 0.9em;
           mask: url("/img/arrow.svg") 0 0/0.9em 0.9em;
   background-color: var(--text-theme);
+}
+
+.coming {
+  text-transform: uppercase;
+  color: var(--text-sec);
 }
 
 .img-box {
@@ -107,11 +192,7 @@
 }
 
 footer {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   margin-top: 10vh;
 }

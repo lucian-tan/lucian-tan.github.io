@@ -1,19 +1,16 @@
 p {
   font-size: 16px;
 }
-
 @media (min-width: 360px) {
   p {
-    font-size: calc(0.4902vw + 14.23529px);
+    font-size: calc(0.4901960784vw + 14.2352941176px);
   }
 }
-
 @media (min-width: 768px) {
   p {
-    font-size: calc(1.04167vw + 10px);
+    font-size: calc(1.0416666667vw + 10px);
   }
 }
-
 @media (min-width: 960px) {
   p {
     font-size: 20px;
@@ -23,13 +20,11 @@ p {
 #logo {
   font-size: 48px;
 }
-
 @media (min-width: 360px) {
   #logo {
-    font-size: calc(2.40964vw + 39.3253px);
+    font-size: calc(2.4096385542vw + 39.3253012048px);
   }
 }
-
 @media (min-width: 1024px) {
   #logo {
     font-size: 64px;
