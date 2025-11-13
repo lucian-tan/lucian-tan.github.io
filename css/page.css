@@ -95,9 +95,6 @@ section {
   width: 100%;
   padding: 4rem 0;
 }
-section:nth-of-type(even) {
-  background-color: var(--background-alt);
-}
 
 h1, h2, h3 {
   margin: 3em 0 0 0;
