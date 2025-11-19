@@ -140,6 +140,78 @@ a:hover {
     opacity: 1;
   }
 }
+/* Subtle tilt effect for images in #work */
+@keyframes tilt-pulse {
+  0% {
+    transform: perspective(800px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1);
+  }
+  50% {
+    transform: perspective(800px) rotateX(2deg) rotateY(-3deg) rotateZ(0.5deg) scale(1.02);
+  }
+  100% {
+    transform: perspective(800px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1);
+  }
+}
+/* container-level vars so JS can control rotation */
+#work .img-box {
+  --mx: 0; /* rotateY degrees (negative -> tilt left) */
+  --my: 0; /* rotateX degrees (positive -> tilt down) */
+  perspective: 900px;
+  transform-style: preserve-3d;
+  overflow: visible; /* ensure shadows are visible */
+}
+
+#work .img-box img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transform-origin: center;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  will-change: transform, filter;
+  transition: transform 220ms cubic-bezier(0.22, 0.8, 0.32, 1), filter 220ms ease, box-shadow 220ms ease;
+  /* use CSS vars for rotation so the tilt can follow pointer precisely */
+  transform: perspective(900px) rotateY(calc(var(--mx, 0) * 1deg)) rotateX(calc(var(--my, 0) * 1deg)) translateY(0) scale(1);
+}
+
+/* Prefer filter: drop-shadow (follows image alpha). Fallback to box-shadow where not supported. */
+@supports (filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0))) {
+  /* when hovered (class toggled by JS) we lift and apply a drop-shadow while keeping rotation from vars */
+  #work .img-box.is-hover img {
+    transform: perspective(900px) rotateY(calc(var(--mx, 0) * 1deg)) rotateX(calc(var(--my, 0) * 1deg)) translateY(-6px) scale(1.02);
+    filter: drop-shadow(0 14px 36px rgba(0, 0, 0, 0.14));
+    -webkit-filter: drop-shadow(0 7px 18px rgba(0, 0, 0, 0.14));
+    outline: none;
+  }
+}
+@supports not (filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0))) {
+  /* fallback: use box-shadow (may be rectangular for transparent images) */
+  #work .img-box.is-hover img {
+    transform: perspective(900px) rotateY(calc(var(--mx, 0) * 1deg)) rotateX(calc(var(--my, 0) * 1deg)) translateY(-6px) scale(1.02);
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.14);
+    outline: none;
+  }
+}
+/* ensure container doesn't clip the drop shadow */
+#work .img-box {
+  overflow: visible;
+}
+
+/* make it accessible: disable motion for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  #work .img-box img {
+    transition: none;
+    animation: none;
+    filter: none;
+    box-shadow: none;
+    transform: none;
+  }
+  #work .img-box.is-hover img {
+    transform: none;
+    box-shadow: none;
+    filter: none;
+  }
+}
 [class*=row-], [class*=col] {
   box-sizing: border-box;
   display: flex;
