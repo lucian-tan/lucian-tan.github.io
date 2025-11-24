@@ -640,6 +640,45 @@ ul li::marker, ol li::marker {
   color: var(--text-sec);
 }
 
+/* Custom emoji bullets for .lrd-2 list items */
+.lrd-2 ul, .lrd-2 ol {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+.lrd-2 li {
+  position: relative;
+  padding-left: 2.2em;
+  margin-bottom: 0.85em;
+  line-height: 1.8;
+  /* fallback / main emoji bullet using ::before for wide support */
+  /* attempt to style native marker where supported (keeps accessibility) */
+}
+.lrd-2 li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.3em;
+  line-height: 1;
+  transform: translateY(0.2em);
+  pointer-events: none;
+}
+.lrd-2 li.up::before {
+  content: "⬆️";
+}
+.lrd-2 li.down::before {
+  content: "⬇️";
+}
+.lrd-2 li.up::marker {
+  content: " ";
+  font-size: 1.05em;
+}
+.lrd-2 li.down::marker {
+  content: " ";
+  font-size: 1.05em;
+}
+
 .next-link {
   text-decoration: none;
 }

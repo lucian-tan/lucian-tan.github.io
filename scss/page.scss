@@ -59,6 +59,37 @@ ul, ol {
   }
 }
 
+/* Custom emoji bullets for .lrd-2 list items */
+.lrd-2 {
+  ul, ol { list-style: none; margin-left: 0; padding-left: 0; }
+
+  li {
+    position: relative;
+    padding-left: 2.2em;
+    margin-bottom: .85em;
+    line-height: 1.8;
+
+    /* fallback / main emoji bullet using ::before for wide support */
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 1.3em;
+      line-height: 1;
+      transform: translateY(0.2em);
+      pointer-events: none;
+    }
+
+    &.up::before  { content: "⬆️"; }
+    &.down::before { content: "⬇️"; }
+
+    /* attempt to style native marker where supported (keeps accessibility) */
+    &.up::marker  { content: " "; font-size: 1.05em; }
+    &.down::marker { content: " "; font-size: 1.05em; }
+  }
+}
+
 .next-link {text-decoration: none;}
 
 .next-story {
