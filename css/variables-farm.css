@@ -7,7 +7,8 @@
   --text-pri: #2E2525;
   --text-sec: rgba(0,0,0,.54);
   --text-dis: rgba(0,0,0,.35);
-  --text-hl: #fbddfe;
+  --text-form: rgba(0,0,0,.15);
+  --text-hl: #d1ecff;
   --nav-blank: rgba(0,0,0,.54);
   --nav-hover: #01579B;
   --img-brightness: none;
@@ -23,7 +24,8 @@
   --text-pri: #FAFAFA;
   --text-sec: rgba(255,255,255,.6);
   --text-dis: rgba(255,255,255,.4);
-  --text-hl: #4f325c;
+  --text-form: rgba(255,255,255,.2);
+  --text-hl: #04365b;
   --nav-blank: #FAFAFA;
   --nav-hover: #85C9FF;
   --img-brightness: brightness(.9);
