@@ -8,6 +8,7 @@
   --text-pri: #2E2525;
   --text-sec: rgba(0,0,0,.54);
   --text-dis: rgba(0,0,0,.35);
+  --text-form: rgba(0,0,0,.15);
   --text-hl: #FFD8D8;
   --nav-blank: rgba(0,0,0,.54);
   --nav-hover: #CA1E1E;
@@ -25,6 +26,7 @@
   --text-pri: #FAFAFA;
   --text-sec: rgba(255,255,255,.6);
   --text-dis: rgba(255,255,255,.4);
+  --text-form: rgba(255,255,255,.2);
   --text-hl: #A12626;
   --nav-blank: #FAFAFA;
   --nav-hover: #FF8383;
@@ -136,6 +138,78 @@ a:hover {
   100% {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+/* Subtle tilt effect for images in #work */
+@keyframes tilt-pulse {
+  0% {
+    transform: perspective(800px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1);
+  }
+  50% {
+    transform: perspective(800px) rotateX(2deg) rotateY(-3deg) rotateZ(0.5deg) scale(1.02);
+  }
+  100% {
+    transform: perspective(800px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1);
+  }
+}
+/* container-level vars so JS can control rotation */
+#work .img-box {
+  --mx: 0; /* rotateY degrees (negative -> tilt left) */
+  --my: 0; /* rotateX degrees (positive -> tilt down) */
+  perspective: 900px;
+  transform-style: preserve-3d;
+  overflow: visible; /* ensure shadows are visible */
+}
+
+#work .img-box img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transform-origin: center;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  will-change: transform, filter;
+  transition: transform 220ms cubic-bezier(0.22, 0.8, 0.32, 1), filter 220ms ease, box-shadow 220ms ease;
+  /* use CSS vars for rotation so the tilt can follow pointer precisely */
+  transform: perspective(900px) rotateY(calc(var(--mx, 0) * 1deg)) rotateX(calc(var(--my, 0) * 1deg)) translateY(0) scale(1);
+}
+
+/* Prefer filter: drop-shadow (follows image alpha). Fallback to box-shadow where not supported. */
+@supports (filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0))) {
+  /* when hovered (class toggled by JS) we lift and apply a drop-shadow while keeping rotation from vars */
+  #work .img-box.is-hover img {
+    transform: perspective(900px) rotateY(calc(var(--mx, 0) * 1deg)) rotateX(calc(var(--my, 0) * 1deg)) translateY(-6px) scale(1.02);
+    filter: drop-shadow(0 14px 36px rgba(0, 0, 0, 0.14));
+    -webkit-filter: drop-shadow(0 7px 18px rgba(0, 0, 0, 0.14));
+    outline: none;
+  }
+}
+@supports not (filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0))) {
+  /* fallback: use box-shadow (may be rectangular for transparent images) */
+  #work .img-box.is-hover img {
+    transform: perspective(900px) rotateY(calc(var(--mx, 0) * 1deg)) rotateX(calc(var(--my, 0) * 1deg)) translateY(-6px) scale(1.02);
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.14);
+    outline: none;
+  }
+}
+/* ensure container doesn't clip the drop shadow */
+#work .img-box {
+  overflow: visible;
+}
+
+/* make it accessible: disable motion for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  #work .img-box img {
+    transition: none;
+    animation: none;
+    filter: none;
+    box-shadow: none;
+    transform: none;
+  }
+  #work .img-box.is-hover img {
+    transform: none;
+    box-shadow: none;
+    filter: none;
   }
 }
 [class*=row-], [class*=col] {
@@ -424,11 +498,11 @@ label {
   color: var(--text-sec);
 }
 
-input[type=text], textarea {
+input[type=text], input[type=email], textarea {
   margin: 0.5em 0 0 0;
   padding: 0.5em;
   border-radius: 4px;
-  border: 1px solid var(--text-dis);
+  border: 1px solid var(--text-form);
   background-color: var(--background-alt);
   color: var(--text-pri);
 }
@@ -500,9 +574,6 @@ section {
   width: 100%;
   padding: 4rem 0;
 }
-section:nth-of-type(even) {
-  background-color: var(--background-alt);
-}
 
 h1, h2, h3 {
   margin: 3em 0 0 0;
@@ -567,6 +638,45 @@ ul li, ol li {
 ul li::marker, ol li::marker {
   font-weight: bold;
   color: var(--text-sec);
+}
+
+/* Custom emoji bullets for .lrd-2 list items */
+.lrd-2 ul, .lrd-2 ol {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+.lrd-2 li {
+  position: relative;
+  padding-left: 2.2em;
+  margin-bottom: 0.85em;
+  line-height: 1.8;
+  /* fallback / main emoji bullet using ::before for wide support */
+  /* attempt to style native marker where supported (keeps accessibility) */
+}
+.lrd-2 li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.3em;
+  line-height: 1;
+  transform: translateY(0.2em);
+  pointer-events: none;
+}
+.lrd-2 li.up::before {
+  content: "⬆️";
+}
+.lrd-2 li.down::before {
+  content: "⬇️";
+}
+.lrd-2 li.up::marker {
+  content: " ";
+  font-size: 1.05em;
+}
+.lrd-2 li.down::marker {
+  content: " ";
+  font-size: 1.05em;
 }
 
 .next-link {
@@ -661,7 +771,7 @@ ul li::marker, ol li::marker {
   padding-bottom: 0;
 }
 #intro #intro-title {
-  min-height: 275px;
+  min-height: 280px;
   margin-bottom: 1em;
 }
 #intro #intro-ql h3 {
